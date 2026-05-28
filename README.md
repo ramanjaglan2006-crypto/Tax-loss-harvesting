@@ -2,8 +2,9 @@
 
 A premium fintech web application built with Next.js 14, Tailwind CSS, and Zustand.
 
-## 🚀 Live Demo
-**[View Live Application on Vercel](https://tax-loss-harvesting-git-main-ramanjaglan2006-cryptos-projects.vercel.app)**
+## 🚀 Live Demos
+- **[View on Vercel (Recommended)](https://tax-loss-harvesting-git-main-ramanjaglan2006-cryptos-projects.vercel.app)**
+- **[View on Render](https://tax-loss-harvesting-whnn.onrender.com)**
 
 ## 🚀 Tech Stack
 
