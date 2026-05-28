@@ -1,6 +1,9 @@
 # Tax Loss Harvesting Dashboard
 
-A premium, responsive, and robust Tax Loss Harvesting web application built with Next.js 14+ (App Router).
+A premium fintech web application built with Next.js 14, Tailwind CSS, and Zustand.
+
+## 🚀 Live Demo
+**[View Live Application on Vercel](https://tax-loss-harvesting-git-main-ramanjaglan2006-cryptos-projects.vercel.app)**
 
 ## 🚀 Tech Stack
 
