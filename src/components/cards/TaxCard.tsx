@@ -9,6 +9,7 @@ interface TaxCardProps {
   originalGains: CapitalGains | null;
   computedGains: ComputedGains | null;
   isHarvested?: boolean;
+  type?: 'pre' | 'post';
 }
 
 const ValueRow = ({ label, value, isLoss = false, type = 'pre' }: { label: string; value: number; isLoss?: boolean, type?: 'pre' | 'post' }) => (
