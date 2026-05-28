@@ -1,0 +1,10 @@
+{
+  "shortTerm": {
+    "profits": 15000,
+    "losses": 5000
+  },
+  "longTerm": {
+    "profits": 45000,
+    "losses": 10000
+  }
+}

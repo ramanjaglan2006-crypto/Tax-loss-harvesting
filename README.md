@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tax Loss Harvesting Dashboard
 
-## Getting Started
+A premium, responsive, and robust Tax Loss Harvesting web application built with Next.js 14+ (App Router).
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework**: Next.js 14+ (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: Shadcn/ui & Lucide React
+- **State Management**: Zustand
+- **Data Fetching**: TanStack React Query & Axios
+- **Animations**: Framer Motion
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ Architecture Decisions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Separation of Concerns**: 
+  - **State**: Raw data and UI states (like selections) are managed using Zustand.
+  - **Business Logic**: Pure, decoupled mathematical functions compute derived state (e.g., net capital gains, post-harvesting logic). This logic does NOT reside inside React components.
+  - **Components**: Separated by responsibility (`TaxCard`, `HoldingsTable`, `DashboardPage`).
+- **Data Fetching**: Next.js API routes serve local JSON mocks. React Query fetches these and provides built-in caching, loading states, and error handling.
+- **Performance**: Leveraging `useMemo` in the dashboard so that computations only re-run when dependencies change. React Query prevents unnecessary network polling.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Setup Instructions
 
-## Learn More
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## 📈 Optimization Techniques
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Derived State Over Duplicated State**: We store only the raw API results and a `Set` of selected IDs. The post-harvesting and savings data are dynamically computed via `useMemo`.
+- **Minimal Rerenders**: Zustand selectors and memoization ensure only the necessary components re-render when a checkbox is toggled.
+- **Premium UX**: Framer Motion provides layout transitions for number changes and toast banners. Suspense-like loading skeletons ensure smooth perceived performance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Edge Cases Handled
 
-## Deploy on Vercel
+- Negative capital gains gracefully render in red with a downward arrow.
+- Indeterminate/Select All logic handles edge cases natively.
+- Prevents rendering null UI states by utilizing loading skeletons.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ready to be deployed on **Vercel** with zero configuration required. Just link your GitHub repository.

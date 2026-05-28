@@ -1,0 +1,86 @@
+[
+  {
+    "id": "h1",
+    "asset": {
+      "coin": "BTC",
+      "coinName": "Bitcoin",
+      "logo": "https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=032"
+    },
+    "holdings": {
+      "totalHoldings": 0.5
+    },
+    "averageBuyPrice": 4000000,
+    "currentPrice": 5500000,
+    "stcg": {
+      "gain": 750000,
+      "balance": 0.5
+    },
+    "ltcg": {
+      "gain": 0,
+      "balance": 0
+    }
+  },
+  {
+    "id": "h2",
+    "asset": {
+      "coin": "ETH",
+      "coinName": "Ethereum",
+      "logo": "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=032"
+    },
+    "holdings": {
+      "totalHoldings": 5
+    },
+    "averageBuyPrice": 250000,
+    "currentPrice": 200000,
+    "stcg": {
+      "gain": -250000,
+      "balance": 5
+    },
+    "ltcg": {
+      "gain": 0,
+      "balance": 0
+    }
+  },
+  {
+    "id": "h3",
+    "asset": {
+      "coin": "SOL",
+      "coinName": "Solana",
+      "logo": "https://cryptologos.cc/logos/solana-sol-logo.svg?v=032"
+    },
+    "holdings": {
+      "totalHoldings": 100
+    },
+    "averageBuyPrice": 5000,
+    "currentPrice": 12000,
+    "stcg": {
+      "gain": 0,
+      "balance": 0
+    },
+    "ltcg": {
+      "gain": 700000,
+      "balance": 100
+    }
+  },
+  {
+    "id": "h4",
+    "asset": {
+      "coin": "ADA",
+      "coinName": "Cardano",
+      "logo": "https://cryptologos.cc/logos/cardano-ada-logo.svg?v=032"
+    },
+    "holdings": {
+      "totalHoldings": 10000
+    },
+    "averageBuyPrice": 80,
+    "currentPrice": 40,
+    "stcg": {
+      "gain": 0,
+      "balance": 0
+    },
+    "ltcg": {
+      "gain": -400000,
+      "balance": 10000
+    }
+  }
+]
